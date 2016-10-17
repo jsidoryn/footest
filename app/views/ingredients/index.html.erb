@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ingredients</h1>
+
+<ul id="ingredients">
+	<% @ingredients.each do |ingredient| %>
+		<%= content_tag_for :li, ingredient do %>
+			<%= ingredient.title %>
+		<% end %>
+	<% end %>
+</ul>
+
+<br>
+
+<%= link_to 'New Ingredient', new_ingredient_path %>
